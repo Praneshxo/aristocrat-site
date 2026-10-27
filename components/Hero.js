@@ -10,43 +10,43 @@ export default function Hero() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from(titleRef.current, {
-      y: 80,
-      opacity: 0,
-      duration: 1.2,
+      y: 36,
+      duration: 0.7,
       ease: 'power4.out',
     }).from(
       subRef.current,
       {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
+        y: 20,
+        duration: 0.5,
         ease: 'power3.out',
       },
-      '-=0.6'
+      '-=0.35'
     );
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-end pb-20 md:pb-32 px-6 md:px-10 pt-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070')] bg-cover bg-center opacity-40" />
-
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-12 gap-8 items-end">
-        <div className="md:col-span-8">
-          <p className="text-xs uppercase tracking-[0.3em] mb-6 text-white/70">
-            [ We are Aristocrat ]
+    <section className="relative flex min-h-screen items-end overflow-hidden bg-black px-5 pb-7 pt-32 sm:px-8 md:px-12 md:pb-8">
+      <div className="relative z-10 mx-auto flex w-full max-w-[1800px] flex-col">
+        <div className="grid items-end gap-10 md:grid-cols-12 md:gap-8">
+          <div className="md:col-span-8 lg:col-span-9">
+            <p className="mb-7 font-mono text-[10px] uppercase tracking-[0.18em] text-white/75 sm:text-xs">[ We are Aristocrat ]</p>
+            <h1 ref={titleRef} className="whitespace-nowrap text-[clamp(2.9rem,5.25vw,6.35rem)] font-black uppercase leading-[0.86] tracking-[-0.07em] text-white">
+              A creative digital<br />
+              agency that goes<br />
+              all in or not at all.
+            </h1>
+          </div>
+          <p ref={subRef} className="max-w-sm pb-1 text-base leading-[1.35] tracking-tight text-white/90 sm:text-lg md:col-span-4 lg:col-span-3 lg:text-xl">
+            We craft brands, products and experiences that hit harder, work smarter and connect deeper. With heart, with craft, and with a team that’s all in or not at all.
           </p>
-          <h1
-            ref={titleRef}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter uppercase"
-          >
-            Creative studio<br />
-            for the music<br />
-            world.
-          </h1>
         </div>
-        <div ref={subRef} className="md:col-span-4 text-base md:text-lg leading-relaxed text-white/80">
-          We craft visuals that stay true to your sound. From release assets to live visuals and full campaigns — built by people who understand the music.
+        <div className="mt-12 grid grid-cols-2 gap-y-5 border-t border-white/80 pt-5 font-mono text-[10px] uppercase tracking-tight text-white/85 sm:grid-cols-3 md:mt-16 md:grid-cols-6 md:text-xs">
+          <span>20+ Digital freaks</span>
+          <span>India based</span>
+          <span className="hidden md:block">[ ● 06 : 02 : 41 ]</span>
+          <span className="hidden md:block" />
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-60">Instagram ↗</a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-60">LinkedIn ↗</a>
         </div>
       </div>
     </section>

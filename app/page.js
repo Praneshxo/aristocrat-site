@@ -5,9 +5,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Clients from '../components/Clients';
 import FeaturedWorks from '../components/FeaturedWorks';
 import Services from '../components/Services';
+import SoundFeature from '../components/SoundFeature';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import AboutCTA from '../components/AboutCTA';
@@ -43,9 +43,9 @@ export default function Home() {
     <main ref={mainRef} className="min-h-screen">
       <Header />
       <Hero />
-      <Clients />
-      <FeaturedWorks />
       <Services />
+      <SoundFeature />
+      <FeaturedWorks />
       <Process />
       <Testimonials />
       <AboutCTA />
